@@ -1,0 +1,34 @@
+  [1m[35m (112.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (311.0ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (112.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (254.9ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (114.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (256.0ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (112.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (242.1ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (108.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (259.6ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+Completed 406 Not Acceptable in 1311ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (112.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (239.9ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+Completed 406 Not Acceptable in 1314ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (114.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grammable_test"[0m
+  [1m[35m (255.1ms)[0m  [1m[35mCREATE DATABASE "grammable_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 59ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
