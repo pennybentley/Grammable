@@ -11,11 +11,7 @@ end
 
 describe "grams#new action" do
   it "should successfully show the new form" do
-    user = User.create(
-      email:                 'fakeuser@gmail.com',
-      password:              'secretPassword',
-      password_confirmation: 'secretPassword'
-      )
+    user = FactoryBot.create(:user)
     sign_in user
     get :new
     expect(response).to have_http_status(:success)
@@ -24,11 +20,7 @@ end
 
 describe "grams#create action" do
   it "should successfully create a new gram in our database" do
-    user = User.create(
-      email:                 'fakeuser@gmail.com',
-      password:              'secretPassword',
-      password_confirmation: 'secretPassword'
-      )
+    user = FactoryBot.create(:user)
     sign_in user
     post :create, params: { gram: { message: 'Hello!' } }
     expect(response).to redirect_to root_path
@@ -37,11 +29,7 @@ describe "grams#create action" do
     expect(gram.user).to eq(user)
   end
   it "should properly deal with validation errors" do
-    user = User.create(
-      email:                 'fakeuser@gmail.com',
-      password:              'secretPassword',
-      password_confirmation: 'secretPassword'
-      )
+    user = FactoryBot.create(:user)
     sign_in user
     post :create, params: { gram: { message: '' } }
     expect(response).to have_http_status(:unprocessable_entity)
