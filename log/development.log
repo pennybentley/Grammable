@@ -581,3 +581,7 @@ Processing by GramsController#index as HTML
 Completed 200 OK in 1409ms (Views: 1374.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGram Destroy (0.2ms)[0m  [1m[31mDELETE FROM "grams" WHERE "grams"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m

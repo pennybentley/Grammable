@@ -606,3 +606,148 @@ Redirected to http://test.host/
 Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
   [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 63ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#new as HTML
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 40ms (Views: 1.1ms | ActiveRecord: 6.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello!"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.3ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "Hello!"], ["created_at", "2019-10-28 22:20:14.680069"], ["updated_at", "2019-10-28 22:20:14.680069"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", ""], ["created_at", "2019-10-28 22:20:14.695171"], ["updated_at", "2019-10-28 22:20:14.695171"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 64ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#new as HTML
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 44ms (Views: 1.1ms | ActiveRecord: 12.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello!"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.4ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "Hello!"], ["created_at", "2019-10-28 22:23:01.200390"], ["updated_at", "2019-10-28 22:23:01.200390"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 53ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 60ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#new as HTML
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 44ms (Views: 1.0ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello!"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.4ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "Hello!"], ["created_at", "2019-10-28 22:23:32.947304"], ["updated_at", "2019-10-28 22:23:32.947304"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 17ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 60ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#new as HTML
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 42ms (Views: 1.0ms | ActiveRecord: 9.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello!"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.4ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["message", "Hello!"], ["created_at", "2019-10-28 22:25:27.840438"], ["updated_at", "2019-10-28 22:25:27.840438"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 422 Unprocessable Entity in 18ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "grams"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
