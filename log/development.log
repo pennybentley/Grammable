@@ -844,3 +844,218 @@ Did you mean?  to_xml):
 app/views/grams/index.html.erb:6:in `block in _app_views_grams_index_html_erb__3162151935108888807_70320903510520'
 app/views/grams/index.html.erb:3:in `_app_views_grams_index_html_erb__3162151935108888807_70320903510520'
 DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started GET "/" for 10.0.2.2 at 2019-10-30 23:39:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:3
+  Rendered grams/index.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 1434ms (Views: 1386.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/grams/new" for 10.0.2.2 at 2019-10-30 23:39:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 381ms (Views: 350.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-10-30 23:39:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fcaf45aacc8 @tempfile=#<Tempfile:/tmp/RackMultipart20191030-13967-ms7ku.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 6101ms (ActiveRecord: 0.2ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started POST "/grams" for 10.0.2.2 at 2019-10-30 23:53:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fd4ccb7a310 @tempfile=#<Tempfile:/tmp/RackMultipart20191030-14191-82ifn1.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7620ms (ActiveRecord: 9.5ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 00:03:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fd4cddf6b88 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-14191-1bkbqdu.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7373ms (ActiveRecord: 0.7ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 00:03:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f081b04ab08 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-14307-3tw4wk.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 6421ms (ActiveRecord: 5.8ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 00:05:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fc331ee2f18 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-14367-1cfz1zc.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 8262ms (ActiveRecord: 6.3ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 21:24:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fc333fd23b8 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-14367-13jmlr1.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 8955ms (ActiveRecord: 1.1ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 22:16:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fc5f46ffc68 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-16954-1xszdmz.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7551ms (ActiveRecord: 7.0ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 22:18:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fc5f38e6e88 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-16954-8fdq94.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7268ms (ActiveRecord: 0.3ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 22:20:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"upload", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fc5f51760e8 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-16954-10bcrnm.jpg>, @original_filename="Cover.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Cover.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[36mGram Create (0.4ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "upload"], ["created_at", "2019-10-31 22:20:48.927170"], ["updated_at", "2019-10-31 22:20:48.927170"], ["user_id", 1], ["picture", "Cover.jpg"]]
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grams_controller.rb:13
+Redirected to http://localhost:3030/
+Completed 302 Found in 10427ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-10-31 22:20:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.9ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:3
+  Rendered grams/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 1465ms (Views: 1437.7ms | ActiveRecord: 1.2ms)
+
+
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started GET "/" for 10.0.2.2 at 2019-10-31 22:36:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:3
+  Rendered grams/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 2232ms (Views: 2152.4ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-10-31 22:37:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSfAHseV3jLTljqVz19OQ1+iAP1DAhnvuad5Mlz+qctYT9i1BFGxs+30SuLigbEHhXjcfnOgw7rOu0N5WXuVMg==", "gram"=>{"message"=>"another test", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fd2ce4085f0 @tempfile=#<Tempfile:/tmp/RackMultipart20191031-17405-1jy080x.png>, @original_filename="Picture.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Picture.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[36mGram Create (1.1ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "another test"], ["created_at", "2019-10-31 22:37:13.077551"], ["updated_at", "2019-10-31 22:37:13.077551"], ["user_id", 1], ["picture", "Picture.png"]]
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grams_controller.rb:13
+Redirected to http://localhost:3030/
+Completed 302 Found in 11299ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-10-31 22:37:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:3
+  Rendered grams/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 499ms (Views: 444.8ms | ActiveRecord: 0.8ms)
+
+
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
