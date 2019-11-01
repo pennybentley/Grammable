@@ -1791,3 +1791,852 @@ Processing by GramsController#index as HTML
 Completed 200 OK in 408ms (Views: 374.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:01:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.6ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 448ms (Views: 421.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:01:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 412ms (Views: 376.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:02:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 412ms (Views: 379.6ms | ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:02:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.9ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (119.8ms)
+Completed 200 OK in 1725ms (Views: 1662.3ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:09:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 390ms (Views: 358.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:10:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 409ms (Views: 376.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:15:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 410ms (Views: 382.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:15:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 413ms (Views: 376.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:15:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.0ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 372ms (Views: 342.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:16:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 441ms (Views: 409.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:17:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 384ms (Views: 348.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:17:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 396ms (Views: 368.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:19:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 429ms (Views: 396.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:19:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 378ms (Views: 349.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:20:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 438ms (Views: 407.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:20:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 426ms (Views: 391.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:20:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 390ms (Views: 358.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:22:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 425ms (Views: 396.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:22:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 430ms (Views: 399.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:23:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 448ms (Views: 413.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:24:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 421ms (Views: 384.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:24:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 385ms (Views: 356.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:25:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 400ms (Views: 371.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:27:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 6064ms (Views: 6036.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:28:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 393ms (Views: 361.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:31:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 4445ms (Views: 4409.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:38:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 405ms (Views: 374.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:38:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (1.1ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 401ms (Views: 374.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:38:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 392ms (Views: 358.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:39:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 459ms (Views: 427.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:40:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 4222ms (Views: 4189.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:40:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 406ms (Views: 375.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:41:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 4205ms (Views: 4175.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2019-11-01 18:42:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m+9Ly5ahrzonzav3g/sIsgKYQOJs35RlamheCTCGzHreOWkAzomZlPUts1z7lJlTHHK3UVlmD89Ot8DWbPIECA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3030/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:42:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 375ms (Views: 350.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-01 18:42:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 519ms (Views: 516.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-11-01 18:42:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IXF7/XOrOUvtz3N9CJi3HUzKcY10UcJGtS7feeH5GetUcMNEVlHcM7rQmj+WQ1ZFo0H/IIAzX1jBqpUhc5jeZg==", "user"=>{"email"=>"penny.bentley@cox.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "penny.bentley@cox.net"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3030/
+Completed 302 Found in 200ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:42:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.8ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 403ms (Views: 378.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/grams/new" for 10.0.2.2 at 2019-11-01 18:47:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 393ms (Views: 360.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-11-01 18:47:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hECZqoXcZvyMwuR9qj7WD4qJvpimkQ+yr+ngcIUNBJjxS46NubA/wxlu2Hgjii5xlIG0sT3EIllezcWEL/KhrA==", "gram"=>{"message"=>"Another one.", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007fe0e65dae48 @tempfile=#<Tempfile:/tmp/RackMultipart20191101-20609-5jtmpp.jpg>, @original_filename="09_september.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"09_september.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[36mGram Create (5.7ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Another one."], ["created_at", "2019-11-01 18:47:35.631574"], ["updated_at", "2019-11-01 18:47:35.631574"], ["user_id", 1], ["picture", "09_september.jpg"]]
+  ↳ app/controllers/grams_controller.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grams_controller.rb:13
+Redirected to http://localhost:3030/
+Completed 302 Found in 8737ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:47:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 6]]
+  ↳ app/views/grams/index.html.erb:19
+  Rendered grams/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 374ms (Views: 348.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/grams/6/edit" for 10.0.2.2 at 2019-11-01 18:48:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGram Load (0.7ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:29
+  Rendering grams/edit.html.erb within layouts/application
+  Rendered grams/edit.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 392ms (Views: 354.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/grams/6" for 10.0.2.2 at 2019-11-01 18:49:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qhQTHmxSdzTmYZTnXzR5z5JDBwy4oOwHMteeroNhP5NRRoK4C49UBJby3qAxoth4Y3AiCi0yhZXNm63DGb+U2A==", "gram"=>{"message"=>"Calendar picture from september."}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grams_controller.rb:40
+  [1m[36mGram Update (0.3ms)[0m  [1m[33mUPDATE "grams" SET "message" = $1, "updated_at" = $2 WHERE "grams"."id" = $3[0m  [["message", "Calendar picture from september."], ["updated_at", "2019-11-01 18:49:50.877657"], ["id", 6]]
+  ↳ app/controllers/grams_controller.rb:40
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grams_controller.rb:40
+Redirected to http://localhost:3030/
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:49:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 6]]
+  ↳ app/views/grams/index.html.erb:19
+  Rendered grams/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 394ms (Views: 370.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/grams/6/comments" for 10.0.2.2 at 2019-11-01 18:50:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RhZY/z/K91J7R4pRI/uDjxMxJzDG9vmDqzAOhy13sNZu0E9v81/xMhOJKVU5nLcODnVmfR5BndVsOtcvvPl8OA==", "comment"=>{"message"=>"Cool!"}, "commit"=>"Add Comment", "gram_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("message", "user_id", "gram_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Cool!"], ["user_id", 1], ["gram_id", 6], ["created_at", "2019-11-01 18:50:07.042993"], ["updated_at", "2019-11-01 18:50:07.042993"]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3030/
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:50:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 5]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 6]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 380ms (Views: 352.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/grams/5" for 10.0.2.2 at 2019-11-01 18:50:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KiqKouHoDOOitaHGjnzOyZNI0Lgy2Avqky9CnZCn/RkC7J0yLX0Kg8p7AsKUG/pIjgyR9epvb7xUJZs1ASkx9w==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:49
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/grams_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grams_controller.rb:54
+  [1m[36mGram Destroy (0.5ms)[0m  [1m[31mDELETE FROM "grams" WHERE "grams"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/grams_controller.rb:54
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grams_controller.rb:54
+Redirected to http://localhost:3030/
+Completed 302 Found in 505ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-01 18:50:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  ↳ app/views/grams/index.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:11
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 6]]
+  ↳ app/views/grams/index.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/grams/index.html.erb:22
+  Rendered grams/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 406ms (Views: 380.2ms | ActiveRecord: 0.7ms)
+
+
