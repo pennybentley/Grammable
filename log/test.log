@@ -14740,3 +14740,362 @@ Processing by GramsController#create as HTML
 Completed 422 Unprocessable Entity in 7ms (Views: 1.8ms | ActiveRecord: 0.4ms)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "grams"[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail1@gmail.com"], ["encrypted_password", "$2a$04$jrPFi5SnZD0x3mnYd48/.OGIcaEFBwiW6QsBzwW3IaMtPKdPO.1DO"], ["created_at", "2019-11-01 00:59:42.846266"], ["updated_at", "2019-11-01 00:59:42.846266"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 00:59:42.852944"], ["updated_at", "2019-11-01 00:59:42.852944"], ["user_id", 222], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail2@gmail.com"], ["encrypted_password", "$2a$04$phhSb7dwRMxrfKQbxlhKSezLw3u0nYTl7gqm5.FItNDczifJ8Qahm"], ["created_at", "2019-11-01 00:59:44.184463"], ["updated_at", "2019-11-01 00:59:44.184463"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"message"=>"awesome gram"}, "gram_id"=>"143"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 223], ["LIMIT", 1]]
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("message", "user_id", "gram_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "awesome gram"], ["user_id", 223], ["gram_id", 143], ["created_at", "2019-11-01 00:59:44.213421"], ["updated_at", "2019-11-01 00:59:44.213421"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 22ms (ActiveRecord: 4.3ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."gram_id" = $1[0m  [["gram_id", 143]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail3@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail3@gmail.com"], ["encrypted_password", "$2a$04$2T20NXKJOPzdZ8Y/6.Y7L.3IW6kcM2ilOOitcaDzc1zGxerSSlN7."], ["created_at", "2019-11-01 00:59:53.861725"], ["updated_at", "2019-11-01 00:59:53.861725"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 00:59:53.863705"], ["updated_at", "2019-11-01 00:59:53.863705"], ["user_id", 224], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"message"=>"awesome gram"}, "gram_id"=>"144"}
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail4@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail4@gmail.com"], ["encrypted_password", "$2a$04$eaSdDt/2WOt6iL5nkTERRuY0tuIGJ/dy6Cm1CvYCdWEJmmoynHiIW"], ["created_at", "2019-11-01 00:59:55.140228"], ["updated_at", "2019-11-01 00:59:55.140228"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"message"=>"awesome gram"}, "gram_id"=>"YOLOSWAG"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 225], ["LIMIT", 1]]
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail5@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail5@gmail.com"], ["encrypted_password", "$2a$04$9VReH8KL/WDVfJvaqlxeou59zasVc43Ye0Rj4aNDY0wbYoc67Tjdq"], ["created_at", "2019-11-01 01:00:05.872884"], ["updated_at", "2019-11-01 01:00:05.872884"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:00:05.875022"], ["updated_at", "2019-11-01 01:00:05.875022"], ["user_id", 226], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail6@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail6@gmail.com"], ["encrypted_password", "$2a$04$FQBT5TuasEYaXqYQbHxCz.LAuJ.RNoed/IdM.4TqzzyxhaNupZ0vm"], ["created_at", "2019-11-01 01:00:07.353438"], ["updated_at", "2019-11-01 01:00:07.353438"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#destroy as HTML
+  Parameters: {"id"=>"145"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 227], ["LIMIT", 1]]
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 145], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 403 Forbidden in 14ms (Views: 4.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail7@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail7@gmail.com"], ["encrypted_password", "$2a$04$tjZtmJ1K7N6S4t5C/wmUG.V0jA9Y2AcVwlo35uwE5xelt5j6RlJ8C"], ["created_at", "2019-11-01 01:00:17.286479"], ["updated_at", "2019-11-01 01:00:17.286479"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.3ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:00:17.288725"], ["updated_at", "2019-11-01 01:00:17.288725"], ["user_id", 228], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#destroy as HTML
+  Parameters: {"id"=>"146"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail8@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail8@gmail.com"], ["encrypted_password", "$2a$04$zVnFOwQPRzR58mTV3vBfVOx/IXoG9vnuLC6B3jbq6LHcNLSDEr.ha"], ["created_at", "2019-11-01 01:00:28.426738"], ["updated_at", "2019-11-01 01:00:28.426738"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:00:28.428849"], ["updated_at", "2019-11-01 01:00:28.428849"], ["user_id", 229], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#destroy as HTML
+  Parameters: {"id"=>"147"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 147], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Destroy (0.2ms)[0m  [1m[31mDELETE FROM "grams" WHERE "grams"."id" = $1[0m  [["id", 147]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 608ms (ActiveRecord: 0.8ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 147], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail9@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail9@gmail.com"], ["encrypted_password", "$2a$04$Z7prsqD5E4lsQztndQkgnu/dOGzCWnFMmn448CbvQOdnkhJ69eRqW"], ["created_at", "2019-11-01 01:00:30.235481"], ["updated_at", "2019-11-01 01:00:30.235481"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#destroy as HTML
+  Parameters: {"id"=>"SPACEDUCK"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 230], ["LIMIT", 1]]
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail10@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail10@gmail.com"], ["encrypted_password", "$2a$04$.TYTf9BA6E3lZ0UNl2GomuHT5A.9lZ.XrLoFvMtmjtMgtEtAJSzVq"], ["created_at", "2019-11-01 01:00:40.029205"], ["updated_at", "2019-11-01 01:00:40.029205"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:00:40.031344"], ["updated_at", "2019-11-01 01:00:40.031344"], ["user_id", 231], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail11@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail11@gmail.com"], ["encrypted_password", "$2a$04$5c/GMQ2RWwsoISn/U0/cy.LP6l3mk5qy8N3WS5KHs330ntH95h8KW"], ["created_at", "2019-11-01 01:00:41.306450"], ["updated_at", "2019-11-01 01:00:41.306450"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#update as HTML
+  Parameters: {"gram"=>{"message"=>"wahoo"}, "id"=>"148"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 232], ["LIMIT", 1]]
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 148], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 231], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 403 Forbidden in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail12@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail12@gmail.com"], ["encrypted_password", "$2a$04$5MD0vyqY2ba0SxMLTAS37eHNuehoQ99gJqVVzmhZ4DSYf0wgjIXp2"], ["created_at", "2019-11-01 01:00:50.917088"], ["updated_at", "2019-11-01 01:00:50.917088"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:00:50.918960"], ["updated_at", "2019-11-01 01:00:50.918960"], ["user_id", 233], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#update as HTML
+  Parameters: {"gram"=>{"message"=>"Hello"}, "id"=>"149"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail13@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail13@gmail.com"], ["encrypted_password", "$2a$04$YXdbMCbFpgo6QfzTU7UNA.z5lzqck2nByRaLdvdV.W4yEnJ8qPUC."], ["created_at", "2019-11-01 01:01:05.669887"], ["updated_at", "2019-11-01 01:01:05.669887"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Initial Value"], ["created_at", "2019-11-01 01:01:05.672465"], ["updated_at", "2019-11-01 01:01:05.672465"], ["user_id", 234], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#update as HTML
+  Parameters: {"gram"=>{"message"=>"Changed"}, "id"=>"150"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 234], ["LIMIT", 1]]
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 150], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 234], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Update (0.2ms)[0m  [1m[33mUPDATE "grams" SET "message" = $1, "updated_at" = $2 WHERE "grams"."id" = $3[0m  [["message", "Changed"], ["updated_at", "2019-11-01 01:01:06.881758"], ["id", 150]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 150], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail14@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail14@gmail.com"], ["encrypted_password", "$2a$04$D3XSrYMDLxXgFZfFi0qX3.nsmLXy6dvg5vTCBfEt4CZ6TmufKdGlC"], ["created_at", "2019-11-01 01:01:06.889920"], ["updated_at", "2019-11-01 01:01:06.889920"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#update as HTML
+  Parameters: {"gram"=>{"message"=>"Changed"}, "id"=>"YOLOSWAG"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 235], ["LIMIT", 1]]
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail15@gmail.com"], ["encrypted_password", "$2a$04$Efc519NcrzpnCsl23OsqlewQ/Ap5U1Z8eiOLQElgUZmmGyCPMHKTy"], ["created_at", "2019-11-01 01:01:16.602648"], ["updated_at", "2019-11-01 01:01:16.602648"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.7ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Initial Value"], ["created_at", "2019-11-01 01:01:16.609269"], ["updated_at", "2019-11-01 01:01:16.609269"], ["user_id", 236], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#update as HTML
+  Parameters: {"gram"=>{"message"=>""}, "id"=>"151"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 236], ["LIMIT", 1]]
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 151], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 236], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering grams/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/edit.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 422 Unprocessable Entity in 81ms (Views: 65.5ms | ActiveRecord: 2.2ms)
+  [1m[36mGram Load (0.3ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 151], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail16@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail16@gmail.com"], ["encrypted_password", "$2a$04$ydkY10XTi8bp6D58fcugOemMsRV9a11oVb01fD6FP0VM1/1T3J6ki"], ["created_at", "2019-11-01 01:01:28.660813"], ["updated_at", "2019-11-01 01:01:28.660813"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:01:28.662981"], ["updated_at", "2019-11-01 01:01:28.662981"], ["user_id", 237], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail17@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail17@gmail.com"], ["encrypted_password", "$2a$04$ONoMvFqcs830jlS1xFECCeQhmnTVg7pOvPyO8nemdh4s4IRe6A6Cy"], ["created_at", "2019-11-01 01:01:29.938764"], ["updated_at", "2019-11-01 01:01:29.938764"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#edit as HTML
+  Parameters: {"id"=>"152"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 238], ["LIMIT", 1]]
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 152], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 237], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 403 Forbidden in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail18@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail18@gmail.com"], ["encrypted_password", "$2a$04$ouwV0JEJ63UCSsMQ7dX6heF9w93ekgIyzPTpApdKKBXcuhTRhRdOS"], ["created_at", "2019-11-01 01:01:39.576314"], ["updated_at", "2019-11-01 01:01:39.576314"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:01:39.578943"], ["updated_at", "2019-11-01 01:01:39.578943"], ["user_id", 239], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#edit as HTML
+  Parameters: {"id"=>"153"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail19@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail19@gmail.com"], ["encrypted_password", "$2a$04$PZKPL31ULOIqrae6ACvxL.o7KRhRiReG66I8P0N8qJlZgpcL9epUu"], ["created_at", "2019-11-01 01:01:50.674450"], ["updated_at", "2019-11-01 01:01:50.674450"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:01:50.676462"], ["updated_at", "2019-11-01 01:01:50.676462"], ["user_id", 240], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#edit as HTML
+  Parameters: {"id"=>"154"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 240], ["LIMIT", 1]]
+  [1m[36mGram Load (0.0ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 154], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 240], ["LIMIT", 1]]
+  Rendering grams/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/edit.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail20@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail20@gmail.com"], ["encrypted_password", "$2a$04$zoLVFABgEyEO85/EGwBJ/.ch7tQn2YIELlN8bn0TSF82b1UjjZmTq"], ["created_at", "2019-11-01 01:02:01.936177"], ["updated_at", "2019-11-01 01:02:01.936177"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (0.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:02:01.938678"], ["updated_at", "2019-11-01 01:02:01.938678"], ["user_id", 241], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#edit as HTML
+  Parameters: {"id"=>"Pfft"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 241], ["LIMIT", 1]]
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 8ms (Views: 1.4ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail21@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail21@gmail.com"], ["encrypted_password", "$2a$04$1lGFgmFt.fZ4uBuBAmhEmOsVTawSC5nHEWZM/71zRlBCPRV36bKUS"], ["created_at", "2019-11-01 01:02:13.177932"], ["updated_at", "2019-11-01 01:02:13.177932"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (2.6ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "hello"], ["created_at", "2019-11-01 01:02:13.185170"], ["updated_at", "2019-11-01 01:02:13.185170"], ["user_id", 242], ["picture", "picture.png"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#show as HTML
+  Parameters: {"id"=>"156"}
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 156], ["LIMIT", 1]]
+  Rendering grams/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/show.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 57ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#show as HTML
+  Parameters: {"id"=>"TACOCAT"}
+  [1m[36mGram Load (0.1ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" WHERE "grams"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail22@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail22@gmail.com"], ["encrypted_password", "$2a$04$T6iFpskbwmBapcszUoT8lemrcRBJ1anJn3eHaDFg.uOngKb1.oBTS"], ["created_at", "2019-11-01 01:02:14.613844"], ["updated_at", "2019-11-01 01:02:14.613844"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 243], ["LIMIT", 1]]
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 23ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello"}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail23@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail23@gmail.com"], ["encrypted_password", "$2a$04$7ZE3tbP6AhB/qc8APUZEwuGZWhAtpQ47hoC8KlKltAG0fxk9uBfWS"], ["created_at", "2019-11-01 01:02:14.648347"], ["updated_at", "2019-11-01 01:02:14.648347"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>"Hello!", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f06b5b002f8 @tempfile=#<Tempfile:/tmp/RackMultipart20191101-19215-1itx3qo.png>, @original_filename="picture.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"picture.png\"\r\nContent-Type: image/png\r\nContent-Length: 11955273\r\n">}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 244], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGram Create (1.2ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Hello!"], ["created_at", "2019-11-01 01:02:24.454676"], ["updated_at", "2019-11-01 01:02:24.454676"], ["user_id", 244], ["picture", "picture.png"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed 302 Found in 10997ms (ActiveRecord: 2.3ms)
+  [1m[36mGram Load (0.2ms)[0m  [1m[34mSELECT  "grams".* FROM "grams" ORDER BY "grams"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 244], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummyemail24@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dummyemail24@gmail.com"], ["encrypted_password", "$2a$04$yHq2iWnYVMCLYRUuB5azauQg.SD0XG8ploGE7X71A6bsE0RF84LCO"], ["created_at", "2019-11-01 01:02:25.769518"], ["updated_at", "2019-11-01 01:02:25.769518"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by GramsController#create as HTML
+  Parameters: {"gram"=>{"message"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 245], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering grams/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grams/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 422 Unprocessable Entity in 6ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "grams"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
