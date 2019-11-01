@@ -2640,3 +2640,5 @@ Processing by GramsController#index as HTML
 Completed 200 OK in 406ms (Views: 380.2ms | ActiveRecord: 0.7ms)
 
 
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
+DEPRECATION WARNING: #fog_provider is deprecated and has no effect (called from block in <top (required)> at /vagrant/src/grammable/config/initializers/carrierwave.rb:4)
